@@ -14,12 +14,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         allSampleData = new ArrayList<>();
 
-        for(int i=1;i<=5;i++)
+        String s[] = {"Location","Other Details", "Passenger Details", "Driver Details"};
+        for(int i=0;i<4;i++)
         {
             SectionDataModel dm = new SectionDataModel();  //header + name, url, description
-            dm.setHeaderTitle("Section = "+i);
+            //dm.setHeaderTitle("Section = "+i);
+            dm.setHeaderTitle(s[i]);
 
-            //name, url, description
+            //for i= 2, name, url, description
             ArrayList<SingleItemModel> singleItem = new ArrayList<>();
             for(int j=0;j<=5;j++)
             {
@@ -27,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
                 singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
             }
             dm.setAllItemsInSection(singleItem);
+
+            //for i= 1, location
+            ArrayList<LocationPojo> locationItem = new ArrayList<>();
+            //date, address, addressnote
+            locationItem.add(new LocationPojo("12 july 19 | 01:28 AM",
+                    "One Pace Plaza, New York, NY 10038, United States",
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"));
+            dm.setAllItemsInLocation(locationItem);
             allSampleData.add(dm);
         }
 
