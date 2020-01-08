@@ -32,7 +32,11 @@
             />
 
     </LinearLayout>
-    <LinearLayout
+
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -42,26 +46,28 @@
         android:id="@+id/lvLine"
         android:layout_width="2dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical"
+        android:elevation="2dp"
         android:background="#000000"></LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#aaccdd"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="35dp"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"/>
 
-    </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/lvAccessebillity"
+        android:layout_below="@+id/rv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
@@ -92,4 +98,6 @@
             android:textSize="20sp"
             />
     </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>
