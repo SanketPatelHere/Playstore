@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<SectionDataModel> allSampleData;
+    RecyclerView rv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
+        rv = (RecyclerView)findViewById(R.id.rv);
         rv.setHasFixedSize(true);
         RecyclerViewDataAdapter adapter = new RecyclerViewDataAdapter(this, allSampleData);
         rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

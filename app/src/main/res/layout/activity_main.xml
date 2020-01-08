@@ -7,10 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -20,6 +16,5 @@
             android:layout_marginBottom="5dp"
             android:scrollbars="none">
         </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
 
 </LinearLayout>

@@ -40,13 +40,14 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         protected TextView itemTitle;
         protected Button btnNumber;
         protected RecyclerView recycler_view_list;
-        LinearLayout lvLine;
+        LinearLayout lvLine, lvAccessebillity;
         public ItemRowHolder(View view) {
             super(view);
             this.itemTitle = (TextView) view.findViewById(R.id.itemTitle);
             this.btnNumber = (Button) view.findViewById(R.id.btnNumber);
             this.recycler_view_list = (RecyclerView) view.findViewById(R.id.rv2);
             this.lvLine = (LinearLayout) view.findViewById(R.id.lvLine);
+            this.lvAccessebillity = (LinearLayout) view.findViewById(R.id.lvAccessebillity);
         }
 
     }
@@ -61,10 +62,14 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         ArrayList singleSectionItems = dataList.get(i).getAllItemsInSection();  //for i=1
         itemRowHolder.itemTitle.setText(sectionName);
         itemRowHolder.btnNumber.setText((i+1)+"");
+        itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+
 
         if(sectionName=="Location")
         {
             Log.i("My name = ",sectionName);
+            itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+
             LocationDataAdapter itemListDataAdapter = new LocationDataAdapter(mContext, locationItems);
             itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
@@ -87,6 +92,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
 
             itemRowHolder.recycler_view_list.setVisibility(View.VISIBLE);
             itemRowHolder.lvLine.setVisibility(View.VISIBLE);
+            //itemRowHolder.lvAccessebillity.setVisibility(View.VISIBLE);
         }
         /*else if(sectionName=="Other Details")
         {
@@ -100,6 +106,8 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         else if(sectionName=="Passenger Details")
         {
             Log.i("My name = ",sectionName);
+            itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+
             PassengerDataAdapter itemListDataAdapter3 = new PassengerDataAdapter(mContext, passengerItems);
             itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
@@ -112,6 +120,8 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         else if(sectionName=="Driver Details")
         {
             Log.i("My name = ",sectionName);
+            itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+
             DriverDataAdapter itemListDataAdapter4 = new DriverDataAdapter(mContext, driverItems);
             itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
@@ -129,6 +139,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
             itemRowHolder.lvLine.setVisibility(View.GONE);
         }
 
+
         itemRowHolder.itemTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,6 +153,17 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
                 {
                     itemRowHolder.recycler_view_list.setVisibility(View.VISIBLE);
                     itemRowHolder.lvLine.setVisibility(View.VISIBLE);
+                }
+                if(sectionName=="Other Details")
+                {
+                    if(itemRowHolder.lvAccessebillity.getVisibility() == View.VISIBLE)
+                    {
+                        itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+                    }
+                    else
+                    {
+                        itemRowHolder.lvAccessebillity.setVisibility(View.VISIBLE);
+                    }
                 }
 
             }

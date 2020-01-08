@@ -52,9 +52,44 @@
         android:background="#aaccdd"
         android:layout_marginLeft="15dp"
         android:layout_gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="vertical"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/lvAccessebillity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accessibility"
+            android:textColor="@color/br_text"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smoking allowed"
+            android:textColor="@color/br_text"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/yes1"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pets allowed"
+            android:textColor="@color/br_text"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/yes1"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 </LinearLayout>

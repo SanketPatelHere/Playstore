@@ -5,5 +5,6 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="bg_text">#3A0557</color>
+    <color name="br_text">#888888</color>
 
 </resources>

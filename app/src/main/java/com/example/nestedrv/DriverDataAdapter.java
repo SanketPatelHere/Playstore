@@ -64,8 +64,8 @@ public class SingleItemRowHolder extends RecyclerView.ViewHolder {
         DriverPojo driverItem = itemsList.get(i);
 
         holder.imgDriver.setImageResource(driverItem.getImgDriver());
-        holder.tvDriverName.setText("Name : "+driverItem.getDriverName() + "");
-        holder.tvBusinessType.setText("gdfgdfgdfgf: "+driverItem.getBusinnesType() + "");
+        holder.tvDriverName.setText(driverItem.getDriverName()+"");
+        holder.tvBusinessType.setText(driverItem.getBusinnesType() + "");
         holder.tvNumber.setText(driverItem.getNumber() + "");
     }
 }
