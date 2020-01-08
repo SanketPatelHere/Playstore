@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
             //for i = 2, Other Details  //img, name, email, phone
             //SectionDataModel dm = new SectionDataModel();
             ArrayList<OtherDetailsPojo> otherDetailItem = new ArrayList<>();
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Business Sedan", "x 4 x 2"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Payment Mode", "Pay by paypal"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Flight Number", "BA2490"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Promo Code", "You save $52"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.car,"Business Sedan", "x 4 x 2"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.debitcard,"Payment Mode", "Pay by paypal"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.jet,"Flight Number", "BA2490"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.promo,"Promo Code", "You save $52"));
             dm.setAllItemsOtherDetails(otherDetailItem);
 
 
