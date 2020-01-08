@@ -35,10 +35,40 @@ public class MainActivity extends AppCompatActivity {
             //date, address, addressnote
             locationItem.add(new LocationPojo("12 july 19 | 01:28 AM",
                     "One Pace Plaza, New York, NY 10038, United States",
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"));
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard."));
             dm.setAllItemsInLocation(locationItem);
+
+            //for i = 3, Passenger Details  //img, name, email, phone
+            //SectionDataModel dm = new SectionDataModel();
+            ArrayList<PassengerPojo> passengerItem = new ArrayList<>();
+            passengerItem.add(new PassengerPojo(R.drawable.ic_person_pin_black_24dp,"Michael Griffin", "michealgriffin@gmail.com", "7959486917"));
+            dm.setAllItemsInPassenger(passengerItem);
+
+
+
+            //for i = 4, Driver Details  //img, name, email, phone
+            //SectionDataModel dm = new SectionDataModel();
+            ArrayList<DriverPojo> driverItem = new ArrayList<>();
+            driverItem.add(new DriverPojo(R.drawable.ic_person_pin_black_24dp,"Nikdrem", "Businnes Sedan | Black", "GV8042"));
+            dm.setAllItemsInDriver(driverItem);
+
+            //for i = 2, Other Details  //img, name, email, phone
+            //SectionDataModel dm = new SectionDataModel();
+            ArrayList<OtherDetailsPojo> otherDetailItem = new ArrayList<>();
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Business Sedan", "x 4 x 2"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Payment Mode", "Pay by paypal"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Flight Number", "BA2490"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.ic_person_pin_black_24dp,"Promo Code", "You save $52"));
+            dm.setAllItemsOtherDetails(otherDetailItem);
+
+
             allSampleData.add(dm);
+
         }
+
+
+
+
 
 
         RecyclerView rv = (RecyclerView)findViewById(R.id.rv);

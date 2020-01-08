@@ -68,13 +68,5 @@ public class LocationDataAdapter extends RecyclerView.Adapter<LocationDataAdapte
         holder.tvDateTime.setText(locationItem.getDate()+"");
         holder.tvAddress.setText(locationItem.getAddress()+"");
         holder.tvAddressNote.setText(locationItem.getAddressNote()+"");
-
-
-
     }
-
-
-
-
-
 }

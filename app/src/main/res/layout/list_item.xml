@@ -40,15 +40,15 @@
 
     <LinearLayout
         android:id="@+id/lvLine"
-        android:layout_width="5dp"
-        android:layout_height="200dp"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="15dp"
         android:orientation="vertical"
         android:background="#000000"></LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="#aaccdd"
         android:layout_marginLeft="15dp"
         android:layout_gravity="center_vertical"
