@@ -5,9 +5,8 @@ public class SingleItemModel {
     public SingleItemModel()
     {
     }
-    public SingleItemModel(String name, String url) {
+    public SingleItemModel(String name) {
         this.name = name;
-        this.url = url;
     }
 
     public String getName() {

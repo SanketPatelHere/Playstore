@@ -1,6 +1,7 @@
 package com.example.nestedrv;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
@@ -68,21 +69,8 @@ public class OtherDetailsDataAdapter extends RecyclerView.Adapter<OtherDetailsDa
         if(i==0)  //X4 X2
         {
             Log.i("My position = ",i+"");
-            SpannableStringBuilder builder = new SpannableStringBuilder();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder
-                        .append(" ", new ImageSpan(mContext, R.drawable.user1), 0)
-                        .append(otherDetailsItem.getDetailInfo()+" ")
-                        .append(" ", new ImageSpan(mContext, R.drawable.briefcase1), 0)
-                        .append(" X 2");
-                holder.tvInfo.setText(builder);
-
-            }
-            else
-            {
-                holder.tvInfo.setText(otherDetailsItem.getDetailInfo()+"");
-            }
-
+            holder.tvInfo.setCompoundDrawablesWithIntrinsicBounds(R.drawable.user1, 0, R.drawable.briefcase1, 0);
+            holder.tvInfo.setText(otherDetailsItem.getDetailInfo());
         }
         else
         {
@@ -92,23 +80,14 @@ public class OtherDetailsDataAdapter extends RecyclerView.Adapter<OtherDetailsDa
         if(i==3)  //promo code
         {
             Log.i("My position = ",i+"");
-            SpannableStringBuilder builder = new SpannableStringBuilder();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                builder
-                        .append(" ", new ImageSpan(mContext, R.drawable.right1), 0)
-                        .append(otherDetailsItem.getDetailInfo()+" ");
-                holder.tvDetailName.setText(builder);
+            holder.tvDetailName.setCompoundDrawablesWithIntrinsicBounds(R.drawable.right1, 0, 0, 0);
+            holder.tvDetailName.setText(otherDetailsItem.getDetailName());
 
-            }
-            else
-            {
-                holder.tvDetailName.setText(otherDetailsItem.getDetailName() + "");
-            }
         }
         else
         {
             holder.imgDetail.setImageResource(otherDetailsItem.getImgDetail());
-            holder.tvDetailName.setText(otherDetailsItem.getDetailName() + "");
+            holder.tvDetailName.setText(otherDetailsItem.getDetailName());
         }
 
 

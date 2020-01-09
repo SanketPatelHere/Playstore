@@ -4,25 +4,14 @@ import java.util.ArrayList;
 
 public class SectionDataModel {
     String headerTitle;
-    ArrayList<LocationPojo> allItemsInLocation;
-    ArrayList<PassengerPojo> allItemsInPassenger;  //name, url, description
-    ArrayList<OtherDetailsPojo> allItemsOtherDetails;  //name, url, description
-    ArrayList<DriverPojo> allItemsInDriver;  //name, url, description
-    ArrayList<SingleItemModel> allItemsInSection;  //name, url, description
+    ArrayList<LocationPojo> allItemsInLocation;  //date, address, addressNote
+    ArrayList<PassengerPojo> allItemsInPassenger;  //img, name, email, phone
+    ArrayList<OtherDetailsPojo> allItemsOtherDetails;  //imgDetail, detailName, detailInfo
+    ArrayList<DriverPojo> allItemsInDriver;  //imgDriver, driverName, businessType, number
+    ArrayList<SingleItemModel> allItemsInSection;  //name ////, url, description
     public SectionDataModel()
     {
     }
-    public SectionDataModel(String headerTitle, ArrayList<SingleItemModel> allItemsInSection) {
-        this.headerTitle = headerTitle;
-        this.allItemsInSection = allItemsInSection;
-    }
-
-    public SectionDataModel(ArrayList<LocationPojo> allItemsInLocation2) {
-        this.allItemsInLocation = allItemsInLocation2;
-    }
-    /*public SectionDataModel(ArrayList<PassengerPojo> allItemsInPassenger) {
-        this.allItemsInPassenger = allItemsInPassenger;
-    }*/
 
     public String getHeaderTitle() {
         return headerTitle;
@@ -37,7 +26,7 @@ public class SectionDataModel {
     }
 
     public void setAllItemsInSection(ArrayList<SingleItemModel> allItemsInSection) {
-        this.allItemsInSection = allItemsInSection;
+        this.allItemsInSection = allItemsInSection;  //name set
     }
 
     public ArrayList<LocationPojo> getAllItemsInLocation() {

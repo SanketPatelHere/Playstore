@@ -61,13 +61,10 @@ public class SingleItemRowHolder extends RecyclerView.ViewHolder {
 
     @Override
     public void onBindViewHolder(DriverDataAdapter.SingleItemRowHolder holder, int i) {
-
         DriverPojo driverItem = itemsList.get(i);
-
         holder.imgDriver.setImageResource(driverItem.getImgDriver());
         holder.tvDriverName.setText(driverItem.getDriverName());
-        holder.tvBusinessType.setText(driverItem.getBusinnesType() + "");
-        holder.tvNumber.setText(driverItem.getNumber() + "");
-        //Log.i("My Name = ",driverItem.getDriverName());
+        holder.tvBusinessType.setText(driverItem.getBusinnesType());
+        holder.tvNumber.setText(driverItem.getNumber());
     }
 }
