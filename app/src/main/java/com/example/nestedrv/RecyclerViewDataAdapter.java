@@ -116,6 +116,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         {
             Log.i("My name = ",sectionName);
             itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
+            itemRowHolder.lvLine.setMinimumHeight(0);
 
             DriverDataAdapter itemListDataAdapter4 = new DriverDataAdapter(mContext, driverItems);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext));
@@ -128,7 +129,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         if(sectionName!="Location") //hide other view
         {
             itemRowHolder.recycler_view_list.setVisibility(View.GONE);
-            itemRowHolder.lvLine.setVisibility(View.GONE);
+            //itemRowHolder.lvLine.setVisibility(View.GONE);
         }
 
 
@@ -139,7 +140,8 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
                 if(itemRowHolder.recycler_view_list.getVisibility() == View.VISIBLE)
                 {
                     itemRowHolder.recycler_view_list.setVisibility(View.GONE);
-                    itemRowHolder.lvLine.setVisibility(View.GONE);
+                    //itemRowHolder.lvLine.setVisibility(View.GONE);
+                    itemRowHolder.lvLine.setMinimumHeight(5);
                 }
                 else
                 {
@@ -160,6 +162,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
                 if(sectionName=="Driver Details")
                 {
                     itemRowHolder.lvLine.setVisibility(View.GONE);
+                    itemRowHolder.lvLine.setMinimumHeight(0);
                 }
 
 

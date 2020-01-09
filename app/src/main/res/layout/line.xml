@@ -9,6 +9,15 @@
        android:background="@drawable/circle11"/>
    <ImageButton
        android:layout_width="20dp"
+       android:layout_height="30dp"
+       android:paddingBottom="20dp"
+       android:background="@drawable/four"/>
+   <ImageButton
+       android:layout_width="20dp"
+       android:layout_height="20dp"
+       android:background="@drawable/circle11"/>
+   <ImageButton
+       android:layout_width="20dp"
        android:layout_height="25dp"
        android:background="@drawable/four"/>
    <ImageButton
@@ -17,15 +26,7 @@
        android:background="@drawable/circle11"/>
    <ImageButton
        android:layout_width="20dp"
-       android:layout_height="10dp"
-       android:background="@drawable/four"/>
-   <ImageButton
-       android:layout_width="20dp"
-       android:layout_height="20dp"
-       android:background="@drawable/circle11"/>
-   <ImageButton
-       android:layout_width="20dp"
-       android:layout_height="10dp"
+       android:layout_height="25dp"
        android:background="@drawable/four"/>
    <ImageButton
        android:layout_width="20dp"
