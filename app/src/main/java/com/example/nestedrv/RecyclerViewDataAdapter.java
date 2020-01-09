@@ -71,10 +71,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
             itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
 
             LocationDataAdapter itemListDataAdapter = new LocationDataAdapter(mContext, locationItems);
-            itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-            itemRowHolder.recycler_view_list.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
-            //itemRowHolder.recycler_view_list.setLayoutManager(new GridLayoutManager(mContext, 2));
             itemRowHolder.recycler_view_list.setAdapter(itemListDataAdapter);
 
             itemRowHolder.recycler_view_list.setVisibility(View.VISIBLE);
@@ -86,7 +83,6 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         {
             Log.i("My name = ",sectionName);
             OtherDetailsDataAdapter itemListDataAdapter2 = new OtherDetailsDataAdapter(mContext, otherDetailsItems);
-            itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new GridLayoutManager(mContext, 2));
             itemRowHolder.recycler_view_list.setAdapter(itemListDataAdapter2);
 
@@ -109,7 +105,6 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
             itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
 
             PassengerDataAdapter itemListDataAdapter3 = new PassengerDataAdapter(mContext, passengerItems);
-            itemRowHolder.recycler_view_list.setHasFixedSize(true);
             itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
             itemRowHolder.recycler_view_list.setAdapter(itemListDataAdapter3);
 
@@ -123,12 +118,9 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
             itemRowHolder.lvAccessebillity.setVisibility(View.GONE);
 
             DriverDataAdapter itemListDataAdapter4 = new DriverDataAdapter(mContext, driverItems);
-            itemRowHolder.recycler_view_list.setHasFixedSize(true);
-            itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
+            itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext));
             itemRowHolder.recycler_view_list.setAdapter(itemListDataAdapter4);
-
             itemRowHolder.recycler_view_list.setVisibility(View.VISIBLE);
-            itemRowHolder.lvLine.setVisibility(View.VISIBLE);
         }
 
 
@@ -165,6 +157,11 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
                         itemRowHolder.lvAccessebillity.setVisibility(View.VISIBLE);
                     }
                 }
+                if(sectionName=="Driver Details")
+                {
+                    itemRowHolder.lvLine.setVisibility(View.GONE);
+                }
+
 
             }
         });

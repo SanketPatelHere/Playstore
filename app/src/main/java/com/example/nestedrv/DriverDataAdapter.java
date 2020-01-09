@@ -1,6 +1,7 @@
 package com.example.nestedrv;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,8 +65,9 @@ public class SingleItemRowHolder extends RecyclerView.ViewHolder {
         DriverPojo driverItem = itemsList.get(i);
 
         holder.imgDriver.setImageResource(driverItem.getImgDriver());
-        holder.tvDriverName.setText(driverItem.getDriverName()+"");
+        holder.tvDriverName.setText(driverItem.getDriverName());
         holder.tvBusinessType.setText(driverItem.getBusinnesType() + "");
         holder.tvNumber.setText(driverItem.getNumber() + "");
+        //Log.i("My Name = ",driverItem.getDriverName());
     }
 }

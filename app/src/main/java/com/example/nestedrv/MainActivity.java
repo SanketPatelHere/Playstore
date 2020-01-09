@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
             //for i = 2, Other Details  //img, name, email, phone
             //SectionDataModel dm = new SectionDataModel();
             ArrayList<OtherDetailsPojo> otherDetailItem = new ArrayList<>();
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.car,"Business Sedan", "x 4 x 2"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.debitcard,"Payment Mode", "Pay by paypal"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.jet,"Flight Number", "BA2490"));
-            otherDetailItem.add(new OtherDetailsPojo(R.drawable.promo,"Promo Code", "You save $52"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.car1,"Business Sedan", "x 4 x 2"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.card11,"Payment Mode", "Pay by paypal"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.plane1,"Flight Number", "BA2490"));
+            otherDetailItem.add(new OtherDetailsPojo(R.drawable.promo1,"Promo Code", "You save $52"));
             dm.setAllItemsOtherDetails(otherDetailItem);
 
 
@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         rv = (RecyclerView)findViewById(R.id.rv);
-        rv.setHasFixedSize(true);
         RecyclerViewDataAdapter adapter = new RecyclerViewDataAdapter(this, allSampleData);
-        rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
 
     }
+
 }

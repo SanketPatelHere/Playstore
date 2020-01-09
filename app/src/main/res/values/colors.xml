@@ -7,5 +7,6 @@
     <color name="bg_text">#3A0557</color>
     <color name="br_text">#F5F5F5</color>
     <color name="bg_silver_text">#888888</color>
+    <color name="bg_silver_text2">#aaaaaa</color>
 
 </resources>
